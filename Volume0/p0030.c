@@ -20,7 +20,7 @@ int dfs(int n, int s, int depth, int index)
     
     if ( depth+1 < n ) {
         int i;
-        for (i = index+1; i <= sum; i++) {
+        for (i = index+1; i <= 9; i++) {
             dfs(n, sum, depth+1, i);
         }
     }
@@ -39,7 +39,7 @@ int main(void)
         }
 
         int i;
-        for (i = 0; i <= s; i++) {
+        for (i = 0; i <= 9; i++) {
             dfs(n, s, 0, i);
         }
         printf("%d\n", count);
